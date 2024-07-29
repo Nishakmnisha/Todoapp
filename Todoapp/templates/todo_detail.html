@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="container">
+    <center>
+        <div class="card" style="width: 18rem;">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Title:{{todo.title}}</li>
+              <li class="list-group-item">Content :{{todo.content}}</li>
+              <li class="list-group-item">Date :{{todo.date}}</li>
+            </ul>
+            <div class="card-footer">
+                <a href="{% url 'todo_update' todo.id %}" class="btn btn-success">Update</a>
+                <a href="{% url 'todo_delete' todo.id %}" class="btn btn-danger">Delete</a>
+            </div>
+          </div>
+    </center>
+</div>
+{% endblock%}

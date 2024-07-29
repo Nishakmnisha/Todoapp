@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block content %}
+    <div class="d-flex flex-column align-items-center text-center m-2 p-3 border-shadow">
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{form}}
+            <input type="submit" class="btn btn-danger">
+        </form>
+        
+    </div>
+    {% endblock %}
+</body>
+</html>
